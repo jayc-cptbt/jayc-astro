@@ -1,0 +1,43 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Card from '../components/Card.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1 class="greeting" style="text-align: center;">Hello, there.</h1>
+			<p>
+				Hi, I'm Jonathan. I make and break stuff with code and maintain computers. 
+				I've helped make internal sites for large businesses to help standardize 
+				support documentation and refine processes, and I've helped small businesses 
+				build custom elements for their eCommerce storefront and blog pages. I can 
+				help your team or business on the frontend or backend, in the database or in 
+				the functionality. Consider me as the next developer or IT staff on your team! 
+			</p>
+			<p>
+				When I'm not developing, I'm messing around in my homelab. I currently run a small Linux Mint server that's 
+				used for file storage, serving some of that media (music and video) over the network, and some 
+				containerized services for developing. 
+			</p>
+			<p>
+				Check out my web résumé to see where I've been and what I've been doing with some added 
+				commentary and check out my GitHub to see what I've been working on. While not slammed with projects, they are things that I've put some decent time into and would appreciate you looking at!
+			</p>
+			<section class="promo cardsec">
+				<Card title="GitHub" body="Where my projects, finished or not, live. Work in progress!" link="#" />
+				<Card title="Résumé" body="See where I've been and what I've done with commentary." link="#" />
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>

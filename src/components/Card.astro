@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string, 
+  body: string, 
+  link: string
+};
+
+const {title, body, link} = Astro.props;
+---
+
+<div class="card">
+  <a href={link}>
+    <h4>{title}</h3>
+  </a>
+    <p>{body}</p>
+</div>
+<style>
+.card {
+  border: solid 1px rgb(var(--gray));
+  border-radius: 10px;
+  padding: 0.3em;
+  flex-grow: 1;
+  max-width: 50%;
+  background: linear-gradient(to bottom, #112730, #74909c) no-repeat;
+}
+
+.card h4 {
+  text-align: center;
+  margin: auto;
+  color: white;
+  transition: ease-out 0.2s;
+}
+
+.card h4:hover {
+  color: #ffa500;
+  transition: ease-in 0.2s;
+}
+</style>
